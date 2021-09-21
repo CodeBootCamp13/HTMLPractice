@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Forms</title>
+	<style type="text/css">
+		label { 
+			display: inline-block;
+			padding-right: 10px; 
+			text-align: right; 
+			width: 200px; 
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>HTML Forms</h1>
+
+	
+	<form action="/forms.html" method="GET" enctype="multipart/form-data">
+
+		<h2>Input Elements</h2>
+
+		<fieldset>
+			<legend>Demographics</legend>
+
+			<label for="aboutMe">About Me:</label>
+			<input 
+				name="textBox1"
+				id="specialTextBox" 
+				type="text"
+				placeholder="Insert some text."
+				value=""
+				>
+			<br><br>
+		
+			<label for="colorPicker">ColorPicker</label>
+			<input type="color" name="colorPicker">
+
+			<br><br>
+			<label for="emailAddress">Email Address:</label>
+			<input type="email" name="emailAddress">
+		</fieldset>
+
+		<br><br>
+		<label for="rangeSlider">Age</label>
+		<input type="range" id="rangeSlider" name="rangeSlider" min="0" max="127">
+		<span id="currentVal"></span>
+
+		<br><br>
+		<label for="timePicker">Alarm Time:</label>
+		<input type="time" id="timePicker" name="timePicker">
+
+		<br><br>
+		<label for="datePicker">Date:</label>
+		<input type="date" id="datePicker" name="datePicker">
+
+		<br><br>
+		<label for="searchBar">Search:</label>
+		<input type="search" id="searchBar" name="searchBar">
+
+		<br><br>
+		<label for="urlBar">URL:</label>
+		<input type="url" id="urlBar" name="urlBar">
+
+		<br><br>
+		<label for="datetimePicker">Date/Time</label>
+		<input type="datetime-local" name="datetimePicker">
+		
+		<input type="hidden" name="pageId" value="6">
+		
+		<br><br>
+		<label for="someNumber">Number:</label>
+		<input min="5" max="15" type="number" name="someNumber" id="someNumber">
+
+		<br><br>
+		<label for="phoneNumber">Phone:</label>
+		<input type="telephone" name="phoneNumber">
+
+		<br><br>
+		<label for="fileUpload">File Upload:</label>
+		<input type="file" name="fileUpload">
+
+		<br><br>
+		<label for="radioChoices">Radio 1</label>
+		<input type="radio" name="radioChoice" value="radio 1" checked>
+		<br>
+		<label for="radioChoices">Radio 2</label>
+		<input type="radio" name="radioChoice" value="radio 2">
+		<br>
+		<label for="radioChoices">Radio 3</label>
+		<input type="radio" name="radioChoice" value="radio 3">
+
+		<br><br>
+		<label for="checkBoxes">Checkbox 1</label>
+		<input type="checkbox" name="checkChoice" value="check 1" checked>
+		<br>
+		<label for="checkBoxes">Checkbox 2</label>
+		<input type="checkbox" name="checkChoice" value="check 2">
+		<br>
+		<label for="checkBoxes">Checkbox 3</label>
+		<input type="checkbox" name="checkChoice" value="check 3" checked>
+		<br>
+
+		<h2>Other Form Elements</h2>
+		<br>
+		<label for="aboutMe">About Me:</label>
+		<textarea name="aboutMe"  rows="10" cols="125">Hello world!</textarea>
+		
+		<br><br>
+		<label for="selectOptions">Colors:</label>
+		<select name="selectOptions">
+			<optgroup label="favorite colors">
+				<option value="blue">blue!</option>
+				<option value="red" >Red!</option>
+				<option value="green" selected>green</option>
+			</optgroup>
+			<optgroup label="hated colors">
+				<option value="purple">purple</option>
+			</optgroup>
+		</select>
+
+
+		<br><br>
+		<input type="submit" value="Search">
+
+		<br><br>
+		<input type="button" value="Something Else">
+	</form>
+
+
+
+<script type="text/javascript">
+	document.getElementById('rangeSlider').addEventListener('change', function(ev) {
+		var val = this.value;
+		document.getElementById('currentVal').innerHTML = val;
+	})
+</script>
+
+</body>
+</html>
