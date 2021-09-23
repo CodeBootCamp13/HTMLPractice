@@ -5,31 +5,95 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Semantic HTML</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Nunito:wght@300&display=swap" rel="stylesheet">
 	<style type="text/css">
+		/* https://coolors.co/0e7c7b-17bebb-d4f4dd-d62246-4b1d3f */
+		html {
+			font-size: 16px;
+		}
 		body {
 			margin: 0;
 			padding: 0;
+			background: rgb(72,63,251);
+			background: linear-gradient(159deg, rgba(72,63,251,1) 13%, rgba(60,138,215,1) 30%, rgba(57,179,182,1) 48%, rgba(54,209,158,1) 64%, rgba(54,209,158,1) 73%, rgba(54,209,158,1) 91%);
+			font-size: 16px;
 		}
-		article { border: 1px solid blue; }
-		h1 { margin: 0; }
+
+		h1,h2,h3,h4,h5,h6 { 
+			background-color: #f40009;
+			margin: 0; 
+			color: white;
+			font-family: cursive;
+			
+
+		}
+
+		a {
+			color:orange;
+		}
+		a:hover {
+			color:palevioletred;
+			font-weight: bold;
+		}
+
 		header {
-			background-color: mediumseagreen;
+
 		}
 		aside { 
-			background-color: #eee;
 			margin-left: 50px;
 			border-left: 2px solid black;
 		}
 		nav {
-			background-color: mediumpurple;
+			
+		}
+		.card {
+			background-color: #fff;
+			border: 6px solid white;
+			border-radius: 25px 25px 0px 25px;
+
+			margin: 4vh;
+			padding: 10px;
+			height: auto;
+			float: left;
+			min-width: 200px;
+		}
+
+		.card.alternate {
+			border-color:mediumturquoise;
+			background-color:mediumturquoise;
+			border-radius: 25px 25px 25px 0px;
+		}
+
+		.card h3,
+		.card h2,
+		.card h5,
+		.card h4 {
+			margin: 5px;
+			color: #000;
+			
+			background-color: #fff;
+			font-size: 2rem;
+			text-decoration: underline overline;
+			font-weight: 100;
+			font-style:oblique;
+		}
+
+		.card p {
+			margin: 6px;
+			background-color: #eee;
+			font-family: Arial, Helvetica, sans-serif;
+			font-style:italic;
+			line-height: 125%;
 		}
 	</style>
 </head>
 <body>
 	
 	<header id="header">
-		<h1>CoolApp.com</h1>
-
+		<h1>Coca Cola</h1>
+		<h5>Some H5</h5>
 	
 			<ul>
 				<li><a href="/">Home</a></li>
@@ -40,7 +104,30 @@
 
 	<div class="main">
 
-		<article>
+		<div class="card">
+			<h4>Some Card Title</h4>
+			<p>
+				This is some cool text. 
+			</p>
+		</div>
+
+		<div class="card alternate">
+			<h4>Some Card Title</h4>
+			<p>
+				This is some cool text. I love large paragraphs. This is 
+				a lot of fun. I hope I have typed enough words by now to make this next
+				part make sense.
+			</p>
+		</div>
+
+		<div class="card">
+			<h2>Card Title</h2>
+			<p>
+				I can put in some cool text.
+			</p>
+		</div>
+
+		<article style="clear:both;">
 			<h2>School Funding Errors!</h2>
 
 			<p>

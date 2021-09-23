@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML Forms</title>
+
+	<link rel="stylesheet" href="/css/style.css">
+	
 	<style type="text/css">
 		label { 
 			display: inline-block;
@@ -12,17 +15,47 @@
 			text-align: right; 
 			width: 200px; 
 		}
+
+		
+
+		h2 {
+			text-decoration: underline;
+			border: 1px solid blue;
+		}
+
+		input, button { 
+			background-color: lightgreen;
+		}
+
+		legend {
+			border: 1px solid blue;
+		}
+		h1#pageTitle { 
+			background-color: purple;
+			color: pink;
+		}
+		#pageTitle {
+			background-color: lightblue;
+			color: red !important;
+		}
+		h1 { 
+			background-color: green; 
+		}
 	</style>
+
+	<style type="text/css">
+	</style>
+
 </head>
 <body>
 	
-	<h1>HTML Forms</h1>
-
+	<h1 id="pageTitle" style="color:green !important;">HTML Forms</h1>
+	<h1>Something else</h1>
 	
 	<form action="/forms.html" method="GET" enctype="multipart/form-data">
 
-		<h2>Input Elements</h2>
-
+		<h2 style="color:green;text-decoration: underline;border: 1px solid red;">Input Elements</h2>
+		<h2>Hello</h2>
 		<fieldset>
 			<legend>Demographics</legend>
 
@@ -95,13 +128,13 @@
 
 		<br><br>
 		<label for="checkBoxes">Checkbox 1</label>
-		<input type="checkbox" name="checkChoice" value="check 1" checked>
+		<input type="checkbox" id="checkChoice_1" name="checkChoice" value="check 1" checked>
 		<br>
 		<label for="checkBoxes">Checkbox 2</label>
-		<input type="checkbox" name="checkChoice" value="check 2">
+		<input type="checkbox" id="checkChoice_2" name="checkChoice" value="check 2">
 		<br>
 		<label for="checkBoxes">Checkbox 3</label>
-		<input type="checkbox" name="checkChoice" value="check 3" checked>
+		<input type="checkbox" id="checkChoice_1" name="checkChoice" value="check 3" checked>
 		<br>
 
 		<h2>Other Form Elements</h2>
